@@ -244,25 +244,27 @@ namespace youtube_Downloader
 
         private void SaveFile()
         {
-            StreamWriter LW = new StreamWriter(@"Link.dat" , true);
+            StreamWriter LW = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Link.dat" , true);
             LW.WriteLine(link);
             LW.Close();
 
-            StreamWriter TW = new StreamWriter(@"title.dat" , true);
+            StreamWriter TW = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\title.dat", true);
             TW.WriteLine(title);
             TW.Close();
 
-            StreamWriter EW = new StreamWriter(@"Extension.dat" , true);
+            StreamWriter EW = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Extension.dat", true);
             EW.WriteLine(ext);
             EW.Close();
 
-            StreamWriter RW = new StreamWriter(@"Resolution.dat" , true);
+            StreamWriter RW = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Resolution.dat", true);
             RW.WriteLine(resolution);
             RW.Close();
 
-            StreamWriter SW = new StreamWriter(@"Size.dat" , true);
+            StreamWriter SW = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Size.dat", true);
             SW.WriteLine(size);
             SW.Close();
+
+            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             
         }
 

@@ -80,12 +80,12 @@
             this.resBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resBox.FormattingEnabled = true;
             this.resBox.Items.AddRange(new object[] {
-            "144p",
-            "240p",
-            "360p",
-            "480p",
-            "720p",
-            "1080p"});
+            "144",
+            "240",
+            "360",
+            "480",
+            "720",
+            "1080"});
             this.resBox.Location = new System.Drawing.Point(480, 236);
             this.resBox.Name = "resBox";
             this.resBox.Size = new System.Drawing.Size(77, 24);

@@ -19,7 +19,7 @@ namespace youtube_Downloader
 
             try
             {
-                read = new StreamReader(@"Location.dat");
+                read = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Location.dat");
                 if ((savedPath = read.ReadLine()) != null && Directory.Exists(savedPath) )
                 {
                     save.Text = savedPath;
@@ -54,7 +54,7 @@ namespace youtube_Downloader
             {
                 path = saveFile.SelectedPath;
                 save.Text = path;
-                StreamWriter File = new StreamWriter(@"Location.dat");
+                StreamWriter File = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Location.dat");
                 File.WriteLine(path);
                 File.Close();
             }
